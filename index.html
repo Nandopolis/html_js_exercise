@@ -47,9 +47,9 @@
 
     <div class="container" style="margin-top:30px">
         <div class="row">
-            <div class="col-sm-4">
-                <h3>Pokémon types</h3>
-                <ul class="nav nav-pills flex-column">
+            <div class="col-sm-2">
+                <h3>Type</h3>
+                <ul id="types" class="nav nav-pills flex-column">
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Normal</a>
                     </li>
@@ -66,90 +66,121 @@
                         <a class="nav-link" href="#">Grass</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Ice</a>
+                        <a class="nav-link" href="#">Ice</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Fight</a>
+                        <a class="nav-link" href="#">Fight</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Poison</a>
+                        <a class="nav-link" href="#">Poison</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Ground</a>
+                        <a class="nav-link" href="#">Ground</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Flying</a>
+                        <a class="nav-link" href="#">Flying</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Psychic</a>
+                        <a class="nav-link" href="#">Psychic</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Bug</a>
+                        <a class="nav-link" href="#">Bug</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Rock</a>
+                        <a class="nav-link" href="#">Rock</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Ghost</a>
+                        <a class="nav-link" href="#">Ghost</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Dragon</a>
+                        <a class="nav-link" href="#">Dragon</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Dark</a>
+                        <a class="nav-link" href="#">Dark</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Steel</a>
+                        <a class="nav-link" href="#">Steel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Fairy</a>
+                        <a class="nav-link" href="#">Fairy</a>
                     </li>
                 </ul>
-                <hr class="d-sm-none">
             </div>
-            <div id="type-data" class="col-sm-8">
-                <h2>Normal</h2>
-                <div>
-                    <div>
-                        <h4>Attacks pros & cons</h5>
-                        <div>
-                            <p>Normal moves are not very effective against:</p>
-                            <ul>
-                                <li>Rock</li>
-                                <li>Steel</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p>Normal moves have no effect on:</p>
-                            <ul>
-                                <li>Ghost</li>
-                            </ul>
-                        </div>
+            <div class="col-sm-2">
+                <h3>Pokémon</h3>
+                <ul id="pokemons" class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Pidgey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pidgeotto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rattata</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">..........</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="data" class="col-sm-8">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <h2 id="name" class="text-center">Pidgey</h2>
+                        <img id="sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png" alt="pidgey" class="w-100">
                     </div>
-                    <div>
-                        <h4>Defense pros & cons</h5>
-                        <div>
-                            <p>This types have no effect on Normal pokémon:</p>
-                            <ul>
-                                <li>Ghost</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p>This types are super effective on Normal pokémon:</p>
-                            <ul>
-                                <li>Fighting</li>
-                            </ul>
-                        </div>
+                    <div class="col-md-7">
+                        <table class="table">
+                            <tr>
+                                <th colspan="2"><h4>Pokédex Data</h4></th>
+                            </tr>
+                            <tr>
+                                <th>National No.</th>
+                                <td id="poke-id">016</td>
+                            </tr>
+                            <tr>
+                                <th>Type</th>
+                                <td id="type">Normal Flying</td>
+                            </tr>
+                            <tr>
+                                <th>Height</th>
+                                <td id="height">0.3 m</td>
+                            </tr>
+                            <tr>
+                                <th>Weight</th>
+                                <td id="weight">1.8 kg</td>
+                            </tr>
+                        </table>
                     </div>
-                </div>
-                <div>
-                    <h4>Pokémon</h4>
-                    <ul>
-                        <li>Pidgey</li>
-                        <li>Pidgeotto</li>
-                        <li>Rattata</li>
-                        <li>...</li>
-                    </ul>
+                    <div class="col-md-11">
+                        <h4>Base Stats</h4>
+                        <table class="table">
+                            <tr>
+                                <th>HP</th>
+                                <td id="hp">40</td>
+                            </tr>
+                            <tr>
+                                <th>Attack</th>
+                                <td id="attack">45</td>
+                            </tr>
+                            <tr>
+                                <th>Defense</th>
+                                <td id="defense">40</td>
+                            </tr>
+                            <tr>
+                                <th>Sp. Atk</th>
+                                <td id="special-attack">35</td>
+                            </tr>
+                            <tr>
+                                <th>Sp. Def</th>
+                                <td id="special-defense">35</td>
+                            </tr>
+                            <tr>
+                                <th>Speed</th>
+                                <td id="speed">56</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

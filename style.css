@@ -4,3 +4,9 @@ div.img-container {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+ul#pokemons {
+    width: 130px;
+    max-height: 100vh;
+    overflow: auto;
+}
